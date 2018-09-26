@@ -1,0 +1,20 @@
+# fibonacci.hmmm
+# Mathew Seedhom - Oct. 27, 2017
+# Says what the nth term of the Fibonacci numbers is
+
+0 	read r1 	# Read n
+1	jeqzn r1 14
+2 	setn r2 0 	# n-2 = 0
+3 	setn r3 1 	# n-1 = 1
+4 	setn r4 1 	# Sum = 0
+5 	write r0 	# Print 0
+6 	addn r1 -1
+7 	jeqzn r1 14 	# If n = 0 break loop
+8 	addn r1 -1 	# Subtract 1 from n
+9 	write r4 	# Print r4
+10 	add r4 r2 r3 	# Makes a new sum
+11 	copy r2 r3 	# Change n - 2
+12 	copy r3 r4 	# change n - 1
+13 	jumpn 7 	# Loops to line 4
+14 	nop
+15 	halt
